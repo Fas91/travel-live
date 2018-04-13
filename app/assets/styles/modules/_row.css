@@ -4,19 +4,34 @@
 
   @mixin clearfix;
 
+ &--t-padding {
+   padding-top: 80px;
+ }
 
  &--gutters {
    margin-right: -65px;
+ }
+
+  &--gutters-small {
+  margin-right: -45px;
  }
 
    &--gutters-large {
    margin-right: -100px;
  }
 
+/*edit custom*/
    &--gutters > div {
-   padding-right: 65px;
-
+     @mixin atMedium{
+        padding-right: 65px;
+     }
+   padding-right: 50px;
  }
+
+
+  /*&--gutters-small > div {
+  margin-right: 15px;
+ }*/
 
    &--gutters-large > div {
    padding-right: 100px;
@@ -28,7 +43,7 @@
 
   }
 
-  @mixin atMedium {
+@mixin atMedium {
 
 
      &__b-margin-until-medium {
@@ -70,11 +85,86 @@
 
     }
 
+  }
+
+  @mixin atLarge {
+
+
+     &__b-margin-until-large {
+
+      margin-bottom: 0;
+
+     }
+
+
+    &__large-4 {
+      float: left;
+      /*-----(100/12)*4----*/
+      width: 33.33%;
+
+    }
+
+    &__large-4--larger{
+
+       width: 37%;
+
+    }
+
+    &__large-6 {
+        float: left;
+        width: 50%;
+
+    }
+
+    &__large-8 {
+
+     float: left;
+     width: 65.8%;
+
+    }
+
+    &__large-8--smaller {
+
+       width: 63%;
+
+    }
+
+
 
 
 
   }
 
+
+
+/*Begin Equal height rules*/
+
+&--equal-height-at-medium {
+
+ @mixin atMedium {
+   display: flex;
+ }
+
+ & > div {
+   float: none;
+   display: flex;
+ }
+
+
+}
+&--equal-height-at-large {
+
+ @mixin atLarge {
+   display: flex;
+ }
+
+ & > div {
+   float: none;
+   display: flex;
+ }
+
+
+}
 
 
 
